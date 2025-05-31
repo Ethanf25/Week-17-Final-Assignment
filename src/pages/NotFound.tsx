@@ -1,4 +1,6 @@
 import React from 'react';
+import '../App.css';
+
 
 const NotFound: React.FC = () => (
   <div className="text-center my-5">

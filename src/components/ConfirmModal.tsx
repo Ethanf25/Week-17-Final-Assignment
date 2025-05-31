@@ -18,7 +18,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
   title = 'Confirm',
   body = 'Are you sure?',
 }) => (
-  <Modal show={show} onHide={onHide} centered>
+  <Modal show={show} onHide={onHide} centered className="confirm-modal">
     <Modal.Header closeButton>
       <Modal.Title>{title}</Modal.Title>
     </Modal.Header>

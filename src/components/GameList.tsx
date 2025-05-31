@@ -22,7 +22,7 @@ interface GameListProps {
 // Display a grid of GameCards
 const GameList: React.FC<GameListProps> = ({ games, onDelete }) => {
   return (
-    <div className="d-flex flex-wrap justify-content-start">
+    <div className="game-list d-flex flex-wrap justify-content-start">
       {games.map(game => (
         <GameCard key={game.id} {...game} onDelete={onDelete} />
       ))}

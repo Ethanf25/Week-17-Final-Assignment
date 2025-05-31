@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import '../App.css';
+
 
 interface EditGameFormProps {
   game: GameData;
@@ -30,7 +32,7 @@ const EditGameForm: React.FC<EditGameFormProps> = ({ game, onSubmit }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="edit-game-form">
       <Form.Group className="mb-3" controlId="title">
         <Form.Label>Title</Form.Label>
         <Form.Control

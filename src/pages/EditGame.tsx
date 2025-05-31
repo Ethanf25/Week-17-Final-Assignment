@@ -3,6 +3,8 @@ import EditGameForm from '../components/EditGameForm';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getGameById, updateGame } from '../api/gameApi';
 import LoadingSpinner from '../components/LoadingSpinner';
+import '../App.css';
+
 
 interface GameData {
   id: string;
@@ -46,7 +48,7 @@ const EditGame: React.FC = () => {
 
   return (
     <>
-      <h1>Edit Game</h1>
+      <h1 className="page-title">Edit Game</h1>
       <EditGameForm game={game} onSubmit={handleUpdateGame} />
     </>
   );
