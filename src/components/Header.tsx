@@ -1,6 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import "./../styles/About.css";
 
 
 const Header: React.FC = () => (
