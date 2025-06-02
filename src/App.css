@@ -1,5 +1,5 @@
 /* Navigation bar */
-.navbar, .navbar-addgame, .navbar-home {
+.navbar, .navbar-addgame, .navbar-home, .navbar-about {
   background-color: #1e1e1e !important;
   color: #f0f0f0 !important;
   border: 1px solid #3b0707 !important;
@@ -7,7 +7,7 @@
   margin: 5px; 
 }
 
-.navbar-addgame:hover, .navbar-home:hover {
+.navbar-addgame:hover, .navbar-home:hover, .navbar-about:hover {
   background-color: #9b0303 !important;
   color: #fff !important;
   border-color: #7a0202 !important;
@@ -199,4 +199,61 @@ h1, h2, h3, h4, h5, h6 {
 .form-title-box, .form-platform-box, .form-status-box, .form-review-box, .form-url-box {
   border-color: #7a0202 !important;
 }
+
+/* About.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #343a40;
+}
+
+/* Ensure select box background stays dark always */
+.form-status-box {
+  background-color: #2a2a2a !important; /* dark background */
+  color: #5c5b5b  !important; /* light text */
+  border-color: #7a0202 !important;
+}
+
+/* Change text color based on selected value */
+.form-status-box.status-playing {
+  color: #007bff !important; /* blue text */
+}
+
+.form-status-box.status-completed {
+  color: #28a745 !important; /* green text */
+}
+
+.form-status-box.status-dropped {
+  color: #dc3545 !important; /* red text */
+}
+
+
+
+
+/* Style options inside the dropdown menu */
+.form-status-box option {
+  background-color: #2a2a2a; /* dark background */
+  color: #5c5b5b
+}
+
+.form-status-box option[value="Playing"] {
+  color: #007bff; /* blue */
+}
+
+.form-status-box option[value="Completed"] {
+  color: #28a745; /* green */
+}
+
+.form-status-box option[value="Dropped"] {
+  color: #dc3545; /* red */
+}
+
+.form-status-select option [value='Select'] {
+  color: #5c5b5b
+}
+
+
 

@@ -1,6 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../App.css';
+
 
 
 const Header: React.FC = () => (
@@ -17,6 +17,9 @@ const Header: React.FC = () => (
         </Nav.Link>
         <Nav.Link className='navbar-addgame' as={Link} to="/add">
           Add Game
+        </Nav.Link>
+        <Nav.Link className='navbar-about' as={Link} to="/about">
+          About
         </Nav.Link>
       </Nav>
     </Navbar.Collapse>
