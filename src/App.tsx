@@ -23,4 +23,4 @@ const App = () => ( // Main App component that sets up routing and layout
   </>
 );
 
-export default App;
+export default App; //export app

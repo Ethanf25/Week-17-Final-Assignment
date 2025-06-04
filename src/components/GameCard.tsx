@@ -16,18 +16,18 @@ interface GameCardProps {
   onDelete: (id: string) => void; // Function to handle game deletion
 }
 
-const GameCard: React.FC<GameCardProps> = ({
+const GameCard: React.FC<GameCardProps> = ({ // Define the GameCard component with the props...
   id, title, platform, status, review, coverImage, onDelete,
 }) => {
-  return (
-    <Card className="game-card mb-3"> {/* Bootstrap card wrapper */}
+  return ( //this is the return statement that renders the game card
+    <Card className="game-card mb-3"> {/* This is the main card container for the game */}
       <Card.Img
-        variant="top"
+        variant="top" //for the top image of the card
         src={coverImage} // Show game cover image
         alt={title} // Alt text for accessibility
         className="game-card-img game-card-img-top"
       />
-      <Card.Body>
+      <Card.Body> 
         <Card.Title className='card-title'>{title}</Card.Title> {/* Game title */}
         <Card.Subtitle className="mb-2 platform-text">{platform}</Card.Subtitle> {/* Platform info */}
         <StatusBadge status={status} /> {/* Status badge component */}
@@ -35,9 +35,9 @@ const GameCard: React.FC<GameCardProps> = ({
         <div className="d-flex justify-content-between mt-3"> {/* Buttons container */}
           <Link to={`/edit/${id}`} className="btn-edit btn btn-primary btn-sm">Edit</Link> {/* Edit button */}
           <Button className='btn-delete' variant="danger" size="sm" onClick={() => onDelete(id)}>Delete</Button> {/* Delete button */}
-        </div>
+        </div> 
       </Card.Body>
-    </Card>
+    </Card> // this was the card body that contains all the game details
   );
 };
 

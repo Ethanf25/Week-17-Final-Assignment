@@ -2,13 +2,13 @@ import React, { useState } from 'react'; // Import React and useState to handle 
 import { Form, Button } from 'react-bootstrap'; // Use Bootstrap form and button components
 import '../App.css'; // Add custom styles from App.css
 
-// Define the props for editing a game, including the game data and submit handler
+// Funciton used to define the props for editing a game, including the game data and submit handler
 interface EditGameFormProps {
   game: GameData;
   onSubmit: (updatedGame: GameData) => void;
 }
 
-// Define the structure for game data
+// function to define the structure of game data
 interface GameData {
   id: string;
   title: string;
@@ -18,13 +18,13 @@ interface GameData {
   coverImage: string;
 }
 
-const EditGameForm: React.FC<EditGameFormProps> = ({ game, onSubmit }) => {
-  // Set initial form values from the existing game info
-  const [title, setTitle] = useState(game.title);
-  const [platform, setPlatform] = useState(game.platform);
-  const [status, setStatus] = useState(game.status);
-  const [review, setReview] = useState(game.review);
-  const [coverImage, setCoverImage] = useState(game.coverImage);
+const EditGameForm: React.FC<EditGameFormProps> = ({ game, onSubmit }) => { // this function defines the EditGameForm component
+  // then below is where I set initial form values from the existing game info
+  const [title, setTitle] = useState(game.title); // Title input state
+  const [platform, setPlatform] = useState(game.platform); // Platform input state
+  const [status, setStatus] = useState(game.status); // Status dropdown state
+  const [review, setReview] = useState(game.review); // Review textarea state
+  const [coverImage, setCoverImage] = useState(game.coverImage); // Cover image URL input state
 
   // Handle form submission and send updated data back to parent
   const handleSubmit = (e: React.FormEvent) => {
@@ -33,10 +33,10 @@ const EditGameForm: React.FC<EditGameFormProps> = ({ game, onSubmit }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="edit-game-form"> {/* Wrap inputs in a Bootstrap form */}
+    <Form onSubmit={handleSubmit} className="edit-game-form"> {/* Form to edit game details */} 
 
       <Form.Group className="mb-3" controlId="title"> {/* Title input */}
-        <Form.Label>Title</Form.Label>
+        <Form.Label>Title</Form.Label> 
         <Form.Control
           type="text"
           value={title}
@@ -89,7 +89,7 @@ const EditGameForm: React.FC<EditGameFormProps> = ({ game, onSubmit }) => {
       </Form.Group>
 
       <Button variant="primary" type="submit">Update Game</Button> {/* Submit button */}
-    </Form>
+    </Form> //button to submit the form
   );
 };
 
