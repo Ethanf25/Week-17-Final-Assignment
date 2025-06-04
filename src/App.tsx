@@ -8,16 +8,16 @@ import About from './pages/About';
 import './App.css';  // Import global styles
 
 
-const App = () => (
+const App = () => ( // Main App component that sets up routing and layout
   <>
-    <Header />
+    <Header /> 
     <div className="container mt-4">
       <Routes>
         <Route path="/" element={<Home />} />        {/* Home page with game list */}
-        <Route path="/add" element={<AddGame />} />
-        <Route path="/edit/:id" element={<EditGame />} />
+        <Route path="/add" element={<AddGame />} /> {/* Add new game page */}
+        <Route path="/edit/:id" element={<EditGame />} /> {/* Edit page for a specific game */}
         <Route path="*" element={<NotFound />} />        {/* Catch-all 404 page */}
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} /> {} {/* About page with information */}
       </Routes>
     </div>
   </>

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import StatusBadge from './StatusBadge';
-import Review from './Review';
-import '../App.css';  // you can keep this or move styles to a new CSS file
+import React from 'react'; // Import React to build the component
+import { Card, Button } from 'react-bootstrap'; // Use Bootstrap Card and Button components
+import { Link } from 'react-router-dom'; // Link for navigation to the edit page
+import StatusBadge from './StatusBadge'; // Show game status with a badge
+import Review from './Review'; // Display the game review
+import '../App.css'; // Import custom styles
 
-// Define props for game info and delete handler
+// Below are the props that GameCard component will accept
 interface GameCardProps {
   id: string;
   title: string;
@@ -13,32 +13,32 @@ interface GameCardProps {
   status: string;
   review: string;
   coverImage: string;
-  onDelete: (id: string) => void;
+  onDelete: (id: string) => void; // Function to handle game deletion
 }
 
 const GameCard: React.FC<GameCardProps> = ({
   id, title, platform, status, review, coverImage, onDelete,
 }) => {
   return (
-    <Card className="game-card mb-3">
+    <Card className="game-card mb-3"> {/* Bootstrap card wrapper */}
       <Card.Img
         variant="top"
-        src={coverImage}
-        alt={title}
+        src={coverImage} // Show game cover image
+        alt={title} // Alt text for accessibility
         className="game-card-img game-card-img-top"
       />
       <Card.Body>
-        <Card.Title className='card-title'>{title}</Card.Title>
-        <Card.Subtitle className="mb-2 platform-text">{platform}</Card.Subtitle>
-        <StatusBadge status={status} />
-        <Review review={review} />
-        <div className="d-flex justify-content-between mt-3">
-          <Link to={`/edit/${id}`} className="btn-edit btn btn-primary btn-sm">Edit</Link>
-          <Button className='btn-delete' variant="danger" size="sm" onClick={() => onDelete(id)}>Delete</Button>
+        <Card.Title className='card-title'>{title}</Card.Title> {/* Game title */}
+        <Card.Subtitle className="mb-2 platform-text">{platform}</Card.Subtitle> {/* Platform info */}
+        <StatusBadge status={status} /> {/* Status badge component */}
+        <Review review={review} /> {/* Review component */}
+        <div className="d-flex justify-content-between mt-3"> {/* Buttons container */}
+          <Link to={`/edit/${id}`} className="btn-edit btn btn-primary btn-sm">Edit</Link> {/* Edit button */}
+          <Button className='btn-delete' variant="danger" size="sm" onClick={() => onDelete(id)}>Delete</Button> {/* Delete button */}
         </div>
       </Card.Body>
     </Card>
   );
 };
 
-export default GameCard;
+export default GameCard; // Export component for use in other parts of the app

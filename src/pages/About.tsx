@@ -2,10 +2,10 @@ import React from "react";
 import "../App.css";
 
 
-const About: React.FC = () => {
+const About: React.FC = () => { // This functional component renders the About page and everything in it
   return (
-    <div className="container py-4">
-    <h1 className="mb-3 text-center text-danger">About Game Library Tracker</h1>
+    <div className="container py-4"> 
+    <h1 className="mb-3 text-center text-danger">About Game Library Tracker</h1> 
       <p>
         This page was created to provide an overview of games that I've played, am currently playing, or plan to play in the future.
         It allows users to add, edit, and delete games from their personal library, prodiving a simple way to track gaming progress and reviews.
@@ -32,7 +32,7 @@ const About: React.FC = () => {
         Thank you to my mentors and peers for their support and guidance throughout this journey.
       </p>
       <p>
-  {" "}
+  {" "} 
   <a
     href="https://github.com/Ethanf25/Week-17-Final-Assignment.git"
     target="_blank"
