@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render( //us
     <BrowserRouter> {/* and then enables navigation and routing in the app */}
       <App /> {/* and finally renders the main App component */}
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
